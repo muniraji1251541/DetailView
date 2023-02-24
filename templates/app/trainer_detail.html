@@ -1,0 +1,26 @@
+{% extends 'app/dummy.html' %} {% block title %}
+<title>Detail</title>
+{% endblock %} {% block body_block %}
+<h1>Trainer Details</h1>
+<h3>Name is {{tr.name}}</h3>
+<h3>Subject is {{tr.sub}}</h3>
+<h3>Institute is {{tr.inst}}</h3>
+<hr>
+<h2>Students Details</h2>
+<table border="2px">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in tr.students.all %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

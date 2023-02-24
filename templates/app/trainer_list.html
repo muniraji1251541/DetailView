@@ -1,0 +1,9 @@
+{% extends 'app/dummy.html' %} {% block title %}
+<title>List</title>
+{% endblock %} {% block body_block %}
+<h1>Trainers list</h1>
+{% for tri in trainers %}
+<a href="{{ tri.pk }}">
+    <h3 style="color: crimson;">{{tri.name}}</h3>
+</a>
+{% endfor %} {% endblock %}
